@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Walkable Ground
+    uniqueID: 3161821517
+    locked: 0
+  - name: Foreground
+    uniqueID: 2046609187
+    locked: 0
+  - name: HardObject
+    uniqueID: 1111716875
+    locked: 0
+  - name: SoftObject
+    uniqueID: 930690323
+    locked: 0

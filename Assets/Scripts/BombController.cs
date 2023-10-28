@@ -35,4 +35,12 @@ public class BombController : MonoBehaviour
         bombsRemaining++;
 
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Bomb"))
+        {
+            collision.isTrigger = false;
+        }
+    }
 }

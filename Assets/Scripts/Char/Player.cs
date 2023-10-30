@@ -21,8 +21,8 @@ public class Players : MonoBehaviour
 
     void MoveInput()
     {
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
+        float x = Input.GetAxisRaw("Horizontal");
+        float y = Input.GetAxisRaw("Vertical");
         Vector3 moveInput = new Vector3(x, y, 0).normalized;
         transform.position += moveInput * moveSpeed * Time.deltaTime;
 
@@ -43,22 +43,17 @@ public class Players : MonoBehaviour
             }
         }
 
-        if (moveInput.y > 0)
+        else if (moveInput.y > 0)
         {
             animator.SetFloat("runy", moveInput.y);
+            animator.SetFloat("run-y", -1);
         }
 
-        if (moveInput.y < 0)
+        else if (moveInput.y < 0)
         {
             animator.SetFloat("run-y", Mathf.Abs(moveInput.y));
         }
     }
-
-
-
-
-
-
     //   private void OnTriggerEnter2D(Collider2D collision)
     // { 
     //     string Objectname =collision.attachedRigidbody.gameObject.name ;
@@ -71,7 +66,7 @@ public class Players : MonoBehaviour
     //     }
 
        
-    // }
+   // }
 
 
 

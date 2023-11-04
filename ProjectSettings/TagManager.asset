@@ -53,3 +53,6 @@ TagManager:
   - name: SoftObject
     uniqueID: 930690323
     locked: 0
+  - name: Player
+    uniqueID: 670381991
+    locked: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e376429f2de4a4347a124d4cc9adf392
+guid: 36dd36a4bc0330f41a21ece11bd853e4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,190 +123,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SNES - Super Bomberman 5 JPN - Zone 3-11_0
+      name: IdleDown
       rect:
         serializedVersion: 2
-        x: 216
-        y: 29
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 72
+        y: 192
+        width: 15
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2266932}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1301c54db2656b64d81a7f8fc0c1195b
-      internalID: -110621253
+      spriteID: 097755a49ecd5f94b9ba39f9d732962e
+      internalID: 1888611611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SNES - Super Bomberman 5 JPN - Zone 3-11_1
+      name: WalkDown1
       rect:
         serializedVersion: 2
-        x: 104
-        y: 157
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 88
+        y: 192
+        width: 15
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2266932}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffb5c32de427c6e47a05d9c1e0e5004c
-      internalID: 454684712
+      spriteID: 1f12ea7408ae8a648a0bec6ac9bf7504
+      internalID: -1267109279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SNES - Super Bomberman 5 JPN - Zone 3-11_2
+      name: WalkDown2
       rect:
         serializedVersion: 2
-        x: 120
-        y: 157
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 56
+        y: 192
+        width: 15
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2266932}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fc98adf95a1afd49a75195ac9a6807c
-      internalID: -577809610
+      spriteID: 2b7df812148b9584cb53851560d44be7
+      internalID: 19408849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SNES - Super Bomberman 5 JPN - Zone 3-11_3
+      name: IdleRight
       rect:
         serializedVersion: 2
-        x: 136
-        y: 157
+        x: 106
+        y: 191
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2266932}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f3ced46d11448b41afc4bc79487c132
-      internalID: 1943320432
+      spriteID: a90728541c512d74c9328cf0cf34f5f1
+      internalID: -736924525
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SNES - Super Bomberman 5 JPN - Zone 3-11_4
+      name: WalkRight1
       rect:
         serializedVersion: 2
-        x: 152
-        y: 157
+        x: 122
+        y: 191
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2266932}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffcd53a825e4de34081cd526800d603a
-      internalID: 1876263233
+      spriteID: ac353fe450d31934784671290ce94107
+      internalID: 2146473516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SNES - Super Bomberman 5 JPN - Zone 3-11_5
+      name: WalkRight2
       rect:
         serializedVersion: 2
-        x: 104
-        y: 173
+        x: 138
+        y: 191
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 22
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2266932}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e147b901ee36154a9b3e5c9cf42dbfb
-      internalID: 433534611
+      spriteID: 2f402d7c305035f4db64954a1887e9b2
+      internalID: 1501636457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SNES - Super Bomberman 5 JPN - Zone 3-11_6
+      name: IdleLeft
       rect:
         serializedVersion: 2
-        x: 152
-        y: 173
+        x: 3
+        y: 194
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2266932}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5d7f70fb115a324480c9da5df31a342
-      internalID: 773127268
+      spriteID: 5f8e75ad24732364c933748631e7645b
+      internalID: -1906561764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SNES - Super Bomberman 5 JPN - Zone 3-11_7
+      name: WalkLeft1
       rect:
         serializedVersion: 2
-        x: 120
-        y: 173
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 19
+        y: 194
+        width: 15
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2266932}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed4d8232bb7283846930ddea0a538f94
-      internalID: -168214365
+      spriteID: 9e9481fb47f33d64cac5ea2bb4ff4c3a
+      internalID: -665801914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SNES - Super Bomberman 5 JPN - Zone 3-11_8
+      name: WalkLeft2
       rect:
         serializedVersion: 2
-        x: 168
-        y: 93
+        x: 36
+        y: 193
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 22
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1469477}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97e115ec7ef1cf744ba1aa1511a28311
-      internalID: 1004864775
+      spriteID: 80bceb2d72600944b84a29351ebcca26
+      internalID: -1135084407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleUp
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 218
+        width: 15
+        height: 22
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2266932}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90932a64702475f4dba3bfcc1d5569ef
+      internalID: -751473190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkUp1
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 218
+        width: 15
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2266932}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c5a140e07b21274589bd36bc150894d
+      internalID: -2093933314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkUp2
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 218
+        width: 15
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2266932}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9196822b8fb5dfd41be09ddc222a348e
+      internalID: 1943817258
       vertices: []
       indices: 
       edges: []
@@ -322,15 +385,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SNES - Super Bomberman 5 JPN - Zone 3-11_0: -110621253
-      SNES - Super Bomberman 5 JPN - Zone 3-11_1: 454684712
-      SNES - Super Bomberman 5 JPN - Zone 3-11_2: -577809610
-      SNES - Super Bomberman 5 JPN - Zone 3-11_3: 1943320432
-      SNES - Super Bomberman 5 JPN - Zone 3-11_4: 1876263233
-      SNES - Super Bomberman 5 JPN - Zone 3-11_5: 433534611
-      SNES - Super Bomberman 5 JPN - Zone 3-11_6: 773127268
-      SNES - Super Bomberman 5 JPN - Zone 3-11_7: -168214365
-      SNES - Super Bomberman 5 JPN - Zone 3-11_8: 1004864775
+      IdleDown: 1888611611
+      IdleLeft: -1906561764
+      IdleRight: -736924525
+      IdleUp: -751473190
+      WalkDown1: -1267109279
+      WalkDown2: 19408849
+      WalkLeft1: -665801914
+      WalkLeft2: -1135084407
+      WalkRight1: 2146473516
+      WalkRight2: 1501636457
+      WalkUp1: -2093933314
+      WalkUp2: 1943817258
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -10,6 +10,10 @@ public class BombController : MonoBehaviour
     public int bombAmount = 1;
     public int bombsRemaining;
 
+    public LayerMask hardObject;
+    public LayerMask softObject;
+    public LayerMask Ground;
+
     private void OnEnable()
     {
         bombsRemaining = bombAmount;
@@ -43,4 +47,6 @@ public class BombController : MonoBehaviour
             collision.isTrigger = false;
         }
     }
+
+  
 }

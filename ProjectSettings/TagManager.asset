@@ -15,7 +15,7 @@ TagManager:
   - Foreground
   - Hard Object
   - SoftObject
-  - 
+  - Bomb
   - 
   - 
   - 
@@ -44,9 +44,6 @@ TagManager:
   - name: Walkable Ground
     uniqueID: 3161821517
     locked: 0
-  - name: Foreground
-    uniqueID: 2046609187
-    locked: 0
   - name: HardObject
     uniqueID: 1111716875
     locked: 0
@@ -55,4 +52,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 670381991
+    locked: 0
+  - name: Foreground
+    uniqueID: 2046609187
     locked: 0

@@ -38,8 +38,8 @@ public class Players : MonoBehaviour
                 animator.SetFloat("moveY", input.y);
 
                 var playerPos = transform.position;
-                playerPos.x += input.x * 0.5f;
-                playerPos.y += input.y * 0.5f;
+                playerPos.x += input.x ;
+                playerPos.y += input.y ;
 
                 if (isWalkable(playerPos))
                     StartCoroutine(Move(playerPos));
@@ -90,8 +90,8 @@ public class Players : MonoBehaviour
         isMoving = true;
         while ((playerPos - transform.position).sqrMagnitude > Mathf.Epsilon)
         {
-            Vector3 newPosition = Vector3.MoveTowards(transform.position, playerPos, 0.5f);
-            transform.position = Vector3.MoveTowards(transform.position, newPosition, moveSpeed * Time.deltaTime);
+         //   Vector3 newPosition = Vector3.MoveTowards(transform.position, playerPos, 0.5f);
+            transform.position = Vector3.MoveTowards(transform.position, playerPos, moveSpeed * Time.deltaTime);
             yield return null;
 
         }

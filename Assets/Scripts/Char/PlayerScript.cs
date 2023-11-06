@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-public class Players : MonoBehaviour
+public class PlayerScript : MonoBehaviour
 {
     public float moveSpeed;
     private Animator animator;

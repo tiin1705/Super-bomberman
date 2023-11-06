@@ -543,6 +543,7 @@ GameObject:
   - component: {fileID: 438135428}
   - component: {fileID: 438135427}
   - component: {fileID: 438135426}
+  - component: {fileID: 438135429}
   m_Layer: 9
   m_Name: SoftObject
   m_TagString: Untagged
@@ -2573,7 +2574,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438135422}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2592,6 +2593,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &438135429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438135422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cce246665e218b34ca811b9aeff0dc92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 438135425}
+  ItemSpawnChange: 0.2
+  spawnableItem:
+  - {fileID: 243322666716770198, guid: 8910ec02a9f02d240b83ba50f3ea706a, type: 3}
+  - {fileID: 8209974605028629494, guid: 44d24abd61e1cb7459a732da729a134b, type: 3}
+  - {fileID: 7785954230094310374, guid: 592946cafd58c7445940d9fc6b904e30, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2697,9 +2716,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5762672165ecf8946806bd50ab9886e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1657074756}
   smoothSpeed: 0.125
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 0, z: -10}
 --- !u!1 &751419785
 GameObject:
   m_ObjectHideFlags: 0
@@ -4435,7 +4454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 988279376}
   - component: {fileID: 988279375}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5036,6 +5055,9 @@ MonoBehaviour:
   SoftObjectLayer:
     serializedVersion: 2
     m_Bits: 0
+  ForeGroundLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!50 &1450997616
 Rigidbody2D:
   serializedVersion: 4
@@ -5234,7 +5256,7 @@ GameObject:
   - component: {fileID: 1537826607}
   - component: {fileID: 1537826606}
   - component: {fileID: 1537826605}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5427,7 +5449,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2046609187
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -10343,7 +10365,7 @@ GameObject:
   - component: {fileID: 1657074761}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10387,7 +10409,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 670381991
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 1888611611, guid: 36dd36a4bc0330f41a21ece11bd853e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -10435,6 +10457,9 @@ MonoBehaviour:
   SoftObjectLayer:
     serializedVersion: 2
     m_Bits: 512
+  ForeGroundLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!50 &1657074758
 Rigidbody2D:
   serializedVersion: 4
@@ -10498,12 +10523,12 @@ MonoBehaviour:
   inputKey: 32
   bombPrefab: {fileID: 1362629491653820611, guid: a7cc4692e02f2184dbe553333ad696c2, type: 3}
   bombFuseTime: 3
-  bombAmount: 6
+  bombAmount: 1
   explosionPrefab: {fileID: 1005973698180251810, guid: ba8d1ee2be753a94c91ac73b73f054cf, type: 3}
   explosionLayerMask:
     serializedVersion: 2
-    m_Bits: 0
-  explosionDuration: 0.5
+    m_Bits: 512
+  explosionDuration: 0.2
   explosionRadius: 1
   destructibleTiles: {fileID: 438135425}
   destructiblePrefab: {fileID: 0}

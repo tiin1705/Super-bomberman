@@ -11,6 +11,7 @@ public class Players : MonoBehaviour
 
     public LayerMask HardObjectLayer;
     public LayerMask SoftObjectLayer;
+    public LayerMask ForeGroundLayer;
     private bool isMoving;
     private Vector2 input;
 
@@ -123,6 +124,14 @@ public class Players : MonoBehaviour
         }
         return true;
     }
+    private bool checkForeGround(Vector3 playerPos)
+    {
+        if (Physics2D.OverlapCircle(playerPos, 0.01f, ForeGroundLayer) != null)
+        {
+            return false;
+        }
+        return true;
+    }
     private bool checkSoftObject(Vector3 playerPos)
     {
         if (Physics2D.OverlapCircle(playerPos, 0.01f, SoftObjectLayer) != null)
@@ -134,7 +143,7 @@ public class Players : MonoBehaviour
 
     private bool isWalkable(Vector3 playerPos)
     {
-        if(checkHardObject(playerPos) && checkSoftObject(playerPos))
+        if(checkHardObject(playerPos) && checkSoftObject(playerPos) & checkForeGround(playerPos))
         {
             return true;
         }

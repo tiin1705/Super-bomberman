@@ -2697,6 +2697,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5762672165ecf8946806bd50ab9886e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  smoothSpeed: 0.125
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &751419785
 GameObject:
   m_ObjectHideFlags: 0
@@ -10500,9 +10503,9 @@ MonoBehaviour:
   explosionLayerMask:
     serializedVersion: 2
     m_Bits: 0
-  explosionDuration: 1
+  explosionDuration: 0.5
   explosionRadius: 1
-  destructibleTiles: {fileID: 0}
+  destructibleTiles: {fileID: 438135425}
   destructiblePrefab: {fileID: 0}
 --- !u!58 &1657074761
 CircleCollider2D:

@@ -2622,7 +2622,6 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
-  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2673,7 +2672,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.8348026
+  orthographic size: 7.6519747
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2698,27 +2697,12 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3800001, y: -0.23000002, z: -10.016682}
+  m_LocalPosition: {x: 0.5, y: 0.92, z: -10.016682}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1657074756}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &519420033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5762672165ecf8946806bd50ab9886e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1657074756}
-  smoothSpeed: 0.125
-  offset: {x: 0, y: 0, z: -10}
 --- !u!1 &751419785
 GameObject:
   m_ObjectHideFlags: 0
@@ -5058,6 +5042,11 @@ MonoBehaviour:
   ForeGroundLayer:
     serializedVersion: 2
     m_Bits: 0
+  BombLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  spriteRendererDeath: {fileID: 0}
+  canReceiveInput: 1
 --- !u!50 &1450997616
 Rigidbody2D:
   serializedVersion: 4
@@ -10434,8 +10423,7 @@ Transform:
   m_LocalPosition: {x: 2, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 519420032}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1657074757
@@ -10460,6 +10448,11 @@ MonoBehaviour:
   ForeGroundLayer:
     serializedVersion: 2
     m_Bits: 128
+  BombLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  spriteRendererDeath: {fileID: 0}
+  canReceiveInput: 1
 --- !u!50 &1657074758
 Rigidbody2D:
   serializedVersion: 4
@@ -10577,3 +10570,4 @@ SceneRoots:
   - {fileID: 1220276290}
   - {fileID: 1417052842}
   - {fileID: 1657074756}
+  - {fileID: 519420032}

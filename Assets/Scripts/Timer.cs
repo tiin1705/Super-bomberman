@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro; 
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
   [SerializeField] TextMeshProUGUI timerText;
   [SerializeField] float remainingTime; 
   public GameObject TextPushStart;  
-  public GameObject TextGameOver;   
- 
-
+  public GameObject TextGameOver;  
+  public string SceneName;
   void Update()
   {
     if(remainingTime > 0)
@@ -22,6 +22,9 @@ public class Timer : MonoBehaviour
         remainingTime = 0;
         // GaneOver
         timerText.color=Color.red;
+        SceneManager.LoadScene(SceneName);
+
+
     }
     else if(remainingTime<10)
     {

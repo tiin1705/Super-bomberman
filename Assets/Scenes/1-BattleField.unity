@@ -2872,6 +2872,7 @@ MonoBehaviour:
   remainingTime: 12
   TextPushStart: {fileID: 579590369}
   TextGameOver: {fileID: 1092391355}
+  SceneName: GameOver
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,10 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
   [SerializeField] TextMeshProUGUI timerText;
-  [SerializeField] float remainingTime;    
+  [SerializeField] float remainingTime; 
+  public GameObject TextPushStart;  
+  public GameObject TextGameOver;   
+ 
 
   void Update()
   {
@@ -14,11 +17,16 @@ public class Timer : MonoBehaviour
     {
         remainingTime -= Time.deltaTime;
     }
-    else if(remainingTime<0)
+    if (remainingTime<0)
     {
         remainingTime = 0;
         // GaneOver
         timerText.color=Color.red;
+    }
+    else if(remainingTime<10)
+    {
+        TextPushStart.SetActive(false); 
+        TextGameOver.SetActive(true); 
     }
     
     int minutes = Mathf.FloorToInt(remainingTime / 60);

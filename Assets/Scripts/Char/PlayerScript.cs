@@ -4,15 +4,22 @@ using UnityEngine;
 
 
 
-public class Players : MonoBehaviour
+public class PlayerScript : MonoBehaviour
 {
     public float moveSpeed;
     private Animator animator;
 
     public LayerMask HardObjectLayer;
     public LayerMask SoftObjectLayer;
+    public LayerMask ForeGroundLayer;
+    public LayerMask BombLayer;
+    public AnimatedSpriteRenderer spriteRendererDeath;
+
+    private bool isDeath = false;
     private bool isMoving;
     private Vector2 input;
+
+    public bool canReceiveInput = true;
 
 
 
@@ -26,6 +33,7 @@ public class Players : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (canReceiveInput) { 
         if (!isMoving)
         {
             input.x = Input.GetAxisRaw("Horizontal");
@@ -46,7 +54,16 @@ public class Players : MonoBehaviour
 
             }
         }
+        }
         animator.SetBool("isMoving", isMoving);
+        if (isDeath)
+        {
+            Debug.Log("isDeath");
+            transform.position = transform.position;
+            canReceiveInput = false;
+            animator.SetBool("isDeath", isDeath);
+            StartCoroutine(DeathActiveAfterDelay(1.25f));
+        }
     }
 
   /*  void MoveInput()
@@ -123,6 +140,14 @@ public class Players : MonoBehaviour
         }
         return true;
     }
+    private bool checkForeGround(Vector3 playerPos)
+    {
+        if (Physics2D.OverlapCircle(playerPos, 0.01f, ForeGroundLayer) != null)
+        {
+            return false;
+        }
+        return true;
+    }
     private bool checkSoftObject(Vector3 playerPos)
     {
         if (Physics2D.OverlapCircle(playerPos, 0.01f, SoftObjectLayer) != null)
@@ -131,16 +156,44 @@ public class Players : MonoBehaviour
         }
         return true;
     }
+    private bool checkBomb(Vector3 playerPos)
+    {
+        if (Physics2D.OverlapCircle(playerPos, 0.01f, BombLayer) != null)
+        {
+            return false;
+        }
+        return true;
+    }
 
     private bool isWalkable(Vector3 playerPos)
     {
-        if(checkHardObject(playerPos) && checkSoftObject(playerPos))
+        if(checkHardObject(playerPos) && checkSoftObject(playerPos) & checkForeGround(playerPos) & checkBomb(playerPos))
         {
             return true;
         }
         return false;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Explosion"))
+        {
+            Death();
+        }
+    }
+    
+    private void Death()
+    {
+        isDeath = true;
+    }
+    IEnumerator DeathActiveAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        gameObject.SetActive(false);
+    }
+
   
+
 
 
 }

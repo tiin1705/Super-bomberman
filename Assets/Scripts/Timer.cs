@@ -17,7 +17,7 @@ public class Timer : MonoBehaviour
     {
         remainingTime -= Time.deltaTime;
     }
-    if (remainingTime<0)
+    if (remainingTime < 0)
     {
         remainingTime = 0;
         // GaneOver
@@ -28,6 +28,7 @@ public class Timer : MonoBehaviour
     }
     else if(remainingTime<10)
     {
+        timerText.color=Color.red;
         TextPushStart.SetActive(false); 
         TextGameOver.SetActive(true); 
     }

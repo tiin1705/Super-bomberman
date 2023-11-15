@@ -2606,7 +2606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilemap: {fileID: 438135425}
-  ItemSpawnChange: 0.2
+  ItemSpawnChange: 1
   spawnableItem:
   - {fileID: 243322666716770198, guid: 8910ec02a9f02d240b83ba50f3ea706a, type: 3}
   - {fileID: 8209974605028629494, guid: 44d24abd61e1cb7459a732da729a134b, type: 3}

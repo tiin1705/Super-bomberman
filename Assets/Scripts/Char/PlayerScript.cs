@@ -29,8 +29,9 @@ public class PlayerScript : MonoBehaviour
 
     public bool canReceiveInput = true;
 
-    private PlayerID playerID;
-    private int playerScore = 0;
+    public int playerID; //Id người chơi
+    private int score = 0; // Điểm của người chơi
+
 
 
 
@@ -40,21 +41,7 @@ public class PlayerScript : MonoBehaviour
     {
         animator = GetComponent<Animator>();
 
-        // Gán PlayerIdScript cho player khi bắt đầu game
-        playerID = new PlayerID();
-
-        // Lấy PlayerId từ PlayerIdScript
-        string playerId = playerID.PlayerId;
-
-        // Hiển thị PlayerId hoặc làm bất cứ điều gì khác bạn cần
-        Debug.Log("Player ID: " + playerId);
-
-        // Nếu có điểm lưu trữ trước đó, lấy điểm đó
-        if (PlayerPrefs.HasKey(playerId + "_Score"))
-        {
-            playerScore = PlayerPrefs.GetInt(playerId + "_Score");
-            Debug.Log("Player Score loaded: " + playerScore);
-        }
+        
 
     }
 
@@ -239,15 +226,32 @@ public class PlayerScript : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void IncreaseScore(int amount)
+    public void IncreaseScore(int points)
     {
-        playerScore += amount;
-        Debug.Log("Player Score: " + playerScore);
 
-        // Lưu điểm vào PlayerPrefs
-        PlayerPrefs.SetInt(playerID.PlayerId + "_Score", playerScore);
-        PlayerPrefs.Save(); // Lưu thay đổi
+        score += points;
+        Debug.Log("Player " + playerID + " Score: " + score);
+
+        // Lưu điểm số vào PlayerPrefs
+        SaveScore();
     }
+
+    // Hàm lưu điểm số vào PlayerPrefs
+    private void SaveScore()
+    {
+        PlayerPrefs.SetInt("PlayerScore_" + playerID, score);
+    }
+    // Hàm khôi phục điểm số từ PlayerPrefs
+    private void LoadScore()
+    {
+        // Nếu có giá trị lưu trữ cho người chơi, khôi phục điểm số
+        if (PlayerPrefs.HasKey("PlayerScore_" + playerID))
+        {
+            score = PlayerPrefs.GetInt("PlayerScore_" + playerID);
+            Debug.Log("Player " + playerID + " Score loaded: " + score);
+        }
+    }
+
 
 
 

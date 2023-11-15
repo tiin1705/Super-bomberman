@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -21,12 +21,22 @@ public class BombController : MonoBehaviour
     public Tilemap destructibleTiles;
     public Destructible destructiblePrefab;
 
-   
-  
+    public LayerMask playerLayer; // Layer của người chơi
+    public PlayerScript ownerPlayer;
+
+
+    private void Awake()
+    {
+        playerLayer = LayerMask.GetMask("Player");
+
+    }
+
 
     private void OnEnable()
     {
         bombsRemaining = bombAmount;
+        ownerPlayer = GetComponent<PlayerScript>();
+
     }
 
     private void Update()
@@ -36,6 +46,7 @@ public class BombController : MonoBehaviour
         }
     }
 
+   
     private IEnumerator PlaceBomb()
     {
         Vector2 position = transform.position;
@@ -43,6 +54,7 @@ public class BombController : MonoBehaviour
         position.y = Mathf.Round(position.y);
 
         GameObject bomb = Instantiate(bombPrefab, position, Quaternion.identity);
+
         bombsRemaining--;
 
         yield return new WaitForSeconds(bombFuseTime);
@@ -54,6 +66,19 @@ public class BombController : MonoBehaviour
         Explosion explosion = Instantiate(explosionPrefab, position, Quaternion.identity);
         explosion.SetActiveRenderer(explosion.start);
         explosion.DestroyAfter(explosionDuration);
+        Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(transform.position, explosionRadius, playerLayer);
+
+        int specificPlayerID = ownerPlayer.playerID; // Sử dụng ownerPlayer thay vì GetComponent<PlayerScript>()
+
+        foreach (Collider2D playerCollider in hitPlayers)
+        {
+            PlayerScript playerScript = playerCollider.GetComponent<PlayerScript>();
+
+            if (playerScript != null && playerScript.playerID == specificPlayerID)
+            {
+                playerScript.IncreaseScore(1);
+            }
+        }
 
         Explode(position, Vector2.up, explosionRadius);
         Explode(position, Vector2.down, explosionRadius);
@@ -78,7 +103,8 @@ public class BombController : MonoBehaviour
             ClearDestructible(position);
             
             return;
-        } 
+        }
+       
 
         Explosion explosion = Instantiate(explosionPrefab, position, Quaternion.identity);
         explosion.SetActiveRenderer(length > 1 ? explosion.middle : explosion.end);

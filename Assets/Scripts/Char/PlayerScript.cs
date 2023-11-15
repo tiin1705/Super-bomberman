@@ -15,6 +15,8 @@ public class PlayerScript : MonoBehaviour
     public LayerMask BombLayer;
     public AnimatedSpriteRenderer spriteRendererDeath;
 
+    //private int score = 0;
+
     [Header("Input")]
     public KeyCode inputUp = KeyCode.W;
     public KeyCode inputDown = KeyCode.S;

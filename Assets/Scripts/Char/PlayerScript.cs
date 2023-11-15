@@ -207,6 +207,10 @@ public class PlayerScript : MonoBehaviour
         {
             Death();
         }
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Slime"))
+        {
+            Death();
+        }
     }
     
     private void Death()

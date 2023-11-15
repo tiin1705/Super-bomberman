@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Item
   - Explosion
+  - Slime
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Stage
   - Explosion
   - Item
-  - 
+  - Slime
   - 
   - 
   - 

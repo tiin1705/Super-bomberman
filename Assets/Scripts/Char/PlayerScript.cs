@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,6 +29,9 @@ public class PlayerScript : MonoBehaviour
 
     public bool canReceiveInput = true;
 
+    private PlayerID playerID;
+    private int playerScore = 0;
+
 
 
 
@@ -36,6 +39,23 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+
+        // Gán PlayerIdScript cho player khi bắt đầu game
+        playerID = new PlayerID();
+
+        // Lấy PlayerId từ PlayerIdScript
+        string playerId = playerID.PlayerId;
+
+        // Hiển thị PlayerId hoặc làm bất cứ điều gì khác bạn cần
+        Debug.Log("Player ID: " + playerId);
+
+        // Nếu có điểm lưu trữ trước đó, lấy điểm đó
+        if (PlayerPrefs.HasKey(playerId + "_Score"))
+        {
+            playerScore = PlayerPrefs.GetInt(playerId + "_Score");
+            Debug.Log("Player Score loaded: " + playerScore);
+        }
+
     }
 
     // Update is called once per frame
@@ -219,7 +239,15 @@ public class PlayerScript : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-  
+    public void IncreaseScore(int amount)
+    {
+        playerScore += amount;
+        Debug.Log("Player Score: " + playerScore);
+
+        // Lưu điểm vào PlayerPrefs
+        PlayerPrefs.SetInt(playerID.PlayerId + "_Score", playerScore);
+        PlayerPrefs.Save(); // Lưu thay đổi
+    }
 
 
 

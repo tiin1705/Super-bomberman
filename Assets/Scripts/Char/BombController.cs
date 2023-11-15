@@ -64,6 +64,7 @@ public class BombController : MonoBehaviour
         bombsRemaining++;
     }
 
+   
     private void Explode(Vector2 position, Vector2 direction, int length)
     {
         if (length <= 0) {
@@ -115,5 +116,6 @@ public class BombController : MonoBehaviour
              other.isTrigger = false;
          }
      }*/
+    
 
 }

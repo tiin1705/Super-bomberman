@@ -8,8 +8,7 @@ public class Timer : MonoBehaviour
 {
   [SerializeField] TextMeshProUGUI timerText;
   [SerializeField] float remainingTime; 
-  public GameObject TextPushStart;  
-  public GameObject TextGameOver;  
+ 
   public string SceneName;
   void Update()
   {
@@ -23,14 +22,10 @@ public class Timer : MonoBehaviour
         // GaneOver
         timerText.color=Color.red;
         SceneManager.LoadScene(SceneName);
-
-
     }
     else if(remainingTime<10)
     {
         timerText.color=Color.red;
-        TextPushStart.SetActive(false); 
-        TextGameOver.SetActive(true); 
     }
     
     int minutes = Mathf.FloorToInt(remainingTime / 60);

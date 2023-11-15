@@ -15,6 +15,14 @@ public class PlayerScript : MonoBehaviour
     public LayerMask BombLayer;
     public AnimatedSpriteRenderer spriteRendererDeath;
 
+    //private int score = 0;
+
+    [Header("Input")]
+    public KeyCode inputUp = KeyCode.W;
+    public KeyCode inputDown = KeyCode.S;
+    public KeyCode inputLeft = KeyCode.A;
+    public KeyCode inputRight = KeyCode.D;
+
     private bool isDeath = false;
     private bool isMoving;
     private Vector2 input;
@@ -36,9 +44,9 @@ public class PlayerScript : MonoBehaviour
         if (canReceiveInput) { 
         if (!isMoving)
         {
-            input.x = Input.GetAxisRaw("Horizontal");
-            input.y = Input.GetAxisRaw("Vertical");
-            if (input.x != 0) input.y = 0;
+            input.x = GetAxisWithKey("Horizontal");
+            input.y = GetAxisWithKey("Vertical");
+                if (input.x != 0) input.y = 0;
 
             if (input != Vector2.zero)
             {
@@ -102,6 +110,25 @@ public class PlayerScript : MonoBehaviour
         }
     }*/
 
+    float GetAxisWithKey(string axisName)
+    {
+        if (Input.GetKey(inputLeft) && axisName == "Horizontal")
+        {
+            return -1f;
+        }
+        else if(Input.GetKey(inputRight) && axisName == "Horizontal")
+        {
+            return 1f;
+        }
+        else if(Input.GetKey(inputUp) && axisName == "Vertical")
+        {
+            return 1f;
+        }else if(Input.GetKey(inputDown) && axisName == "Vertical")
+        {
+            return -1f;
+        }
+        return 0f;
+    }
     IEnumerator Move(Vector3 playerPos)
     {
         isMoving = true;

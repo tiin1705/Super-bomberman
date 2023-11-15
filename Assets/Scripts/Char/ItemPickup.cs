@@ -30,12 +30,19 @@ public class ItemPickup : MonoBehaviour
 
         Destroy(gameObject);
     }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) {
+        if (other.CompareTag("Player"))
+        {
             OnItemPickup(other.gameObject);
         }
+        if (other.CompareTag("Explosion"))
+        {
+            Destroy(this.gameObject);
+        }
+     
     }
+
+
 
 }

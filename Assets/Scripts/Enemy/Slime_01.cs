@@ -40,7 +40,7 @@ public class Slime_01 : MonoBehaviour
         if(collision.gameObject.layer == LayerMask.NameToLayer("Explosion"))
         {
              animator.Play("SlimeDie");
-              StartCoroutine(DeathActiveAfterDelay(1.25f));
+            
               Death();
        
         }
@@ -57,11 +57,7 @@ public class Slime_01 : MonoBehaviour
       //  animator.Play("SlimeDie");
         Destroy(gameObject);
     }
-     IEnumerator DeathActiveAfterDelay(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        gameObject.SetActive(false);
-    }
+   
 
 
 }

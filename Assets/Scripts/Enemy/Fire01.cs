@@ -42,7 +42,16 @@ public class Fire01 : MonoBehaviour
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
+
+
     {
+         if (collision.gameObject.layer == LayerMask.NameToLayer("Explosion"))
+        {
+            animator.Play("SlimeDie");
+          
+            Death();
+
+        }
           Vector2 position = transform.position;
 
           transform.localScale = new Vector2(-(Mathf.Sign(rigidbody.velocity.x)),transform.localScale.y);
@@ -57,13 +66,7 @@ public class Fire01 : MonoBehaviour
 
         }
 
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Explosion"))
-        {
-            animator.Play("SlimeDie");
-            StartCoroutine(DeathActiveAfterDelay(1.25f));
-            Death();
-
-        }
+       
 
       
 
@@ -112,11 +115,7 @@ public class Fire01 : MonoBehaviour
         //  animator.Play("SlimeDie");
         Destroy(gameObject);
     }
-    IEnumerator DeathActiveAfterDelay(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        gameObject.SetActive(false);
-    }
+    
 
 
 }

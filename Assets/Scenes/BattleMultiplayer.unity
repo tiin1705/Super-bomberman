@@ -2974,7 +2974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &445177890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5514,7 +5514,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &942755840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6538,6 +6538,7 @@ MonoBehaviour:
   inputLeft: 97
   inputRight: 100
   canReceiveInput: 1
+  playerID: 0
 --- !u!50 &1450997616
 Rigidbody2D:
   serializedVersion: 4
@@ -6722,6 +6723,10 @@ MonoBehaviour:
   explosionRadius: 1
   destructibleTiles: {fileID: 0}
   destructiblePrefab: {fileID: 0}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  ownerPlayer: {fileID: 0}
 --- !u!1 &1537826603
 GameObject:
   m_ObjectHideFlags: 0
@@ -11889,7 +11894,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 670381991
-  m_SortingLayer: 5
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 1888611611, guid: 36dd36a4bc0330f41a21ece11bd853e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -11948,6 +11953,7 @@ MonoBehaviour:
   inputLeft: 97
   inputRight: 100
   canReceiveInput: 1
+  playerID: 0
 --- !u!50 &1657074758
 Rigidbody2D:
   serializedVersion: 4
@@ -12020,6 +12026,10 @@ MonoBehaviour:
   explosionRadius: 1
   destructibleTiles: {fileID: 438135425}
   destructiblePrefab: {fileID: 0}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  ownerPlayer: {fileID: 0}
 --- !u!58 &1657074761
 CircleCollider2D:
   m_ObjectHideFlags: 0

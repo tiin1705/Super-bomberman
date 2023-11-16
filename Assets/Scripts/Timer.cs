@@ -8,7 +8,9 @@ public class Timer : MonoBehaviour
 {
   [SerializeField] TextMeshProUGUI timerText;
   [SerializeField] float remainingTime; 
- 
+  public GameObject player1;  
+  public GameObject player2;  
+  public GameObject player3;  
   public string SceneName;
   void Update()
   {
@@ -22,6 +24,10 @@ public class Timer : MonoBehaviour
         // GaneOver
         timerText.color=Color.red;
         SceneManager.LoadScene(SceneName);
+    }
+    else if(!player1.activeSelf && !player2.activeSelf && !player3.activeSelf)
+    {
+      SceneManager.LoadScene(SceneName);
     }
     else if(remainingTime<10)
     {

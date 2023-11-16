@@ -23,7 +23,7 @@ TagManager:
   - Explosion
   - Item
   - Slime
-  - 
+  - Player
   - 
   - 
   - 
@@ -55,6 +55,9 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 2046609187
+    locked: 0
+  - name: Slime
+    uniqueID: 2488576865
     locked: 0
   - name: Bomb
     uniqueID: 3834282087

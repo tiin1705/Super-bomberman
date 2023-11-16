@@ -3217,6 +3217,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 1102099884}
   remainingTime: 180
+  player1: {fileID: 1657074754}
+  player2: {fileID: 1711474871}
+  player3: {fileID: 441666127}
   SceneName: GameOver
 --- !u!224 &720553493
 RectTransform:

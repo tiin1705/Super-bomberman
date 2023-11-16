@@ -36,6 +36,10 @@ public class ItemPickup : MonoBehaviour
         {
             OnItemPickup(other.gameObject);
         }
+         if (other.CompareTag("Slime"))
+        {
+            Destroy(gameObject);
+        }
         if (other.CompareTag("Explosion"))
         {
             Destroy(this.gameObject);

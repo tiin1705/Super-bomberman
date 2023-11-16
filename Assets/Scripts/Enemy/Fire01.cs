@@ -110,7 +110,7 @@ public class Fire01 : MonoBehaviour
     private void Death()
     {
         //  animator.Play("SlimeDie");
-        Destroy(gameObject);
+        Destroy(this.gameObject);
     }
     IEnumerator DeathActiveAfterDelay(float delay)
     {
